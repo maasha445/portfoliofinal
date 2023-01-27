@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+  <title>Maasha Salih Portfolio</title>
+
+   <!-- 
+      - FontAweome CDN Link for Icons 
+    -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/img/logo.ico" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <!-- <link rel="stylesheet" href="./assets/css/styles.css"> -->
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+   
+    
+    .getButton {
+  text-align: center;
+  width: 100%;
+  background-color: #207aae;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.scrollButton {
+  text-align: center;
+  width: 25%;
+  background-color: #90327d;
+  color: white;
+  padding: 4px 10px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+.getButton:hover {
+  background-color: #20709a;
+}
+
+</style>
+</head>
+
+<body>
+    <main>
+           <!--
+        - #SIDEBAR
+      -->
+ 
+     <aside class="sidebar" data-sidebar>
+  
+        <div class="sidebar-info">
+  
+          <figure class="avatar-box">
+            <img src="./assets/img/dp.jpg" alt="Maasha Salih" width="80" style="border-radius: 25%;">
+          </figure>
+  
+          <div class="info-content">
+            <h1 class="name" title="Richard hanrick">Maasha Salih</h1>
+  
+            <p class="title">MSc in Software Engineering</p>
+            <br>
+            <img src="./assets/img/transparent-logo.png"  style= "display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;">
+          </div>
+          </div>
+  
+          <button class="info_more-btn" data-sidebar-btn>
+            <span>Show Contacts</span>
+  
+            <ion-icon name="chevron-down"></ion-icon>
+          </button>
+  
+        </div>
+  
+        <div class="sidebar-info_more">
+  
+          <div class="separator"></div>
+  
+          <ul class="contacts-list">
+  
+            <li class="contact-item">
+  
+              <div class="icon-box">
+                <ion-icon name="mail-outline"></ion-icon>
+              </div>
+  
+              <div class="contact-info">
+                <p class="contact-title">Email</p>
+  
+                <a href="mailto:richard@example.com" class="contact-link">maasha_salih@gmail.com</a>
+              </div>
+  
+            </li>
+  
+            <li class="contact-item">
+  
+              <div class="icon-box">
+                <ion-icon name="phone-portrait-outline"></ion-icon>
+              </div>
+  
+              <div class="contact-info">
+                <p class="contact-title">Phone</p>
+  
+                <a href="tel:+447988 390 206" class="contact-link">+447988 390 206</a>
+              </div>
+  
+            </li>
+  
+            <li class="contact-item">
+  
+              <div class="icon-box">
+                <ion-icon name="calendar-outline"></ion-icon>
+              </div>
+  
+              <div class="contact-info">
+                <p class="contact-title">Birthday</p>
+  
+                <time datetime="1982-06-23">June 02, 1996</time>
+              </div>
+  
+            </li>
+  
+            <li class="contact-item">
+  
+              <div class="icon-box">
+                <ion-icon name="location-outline"></ion-icon>
+              </div>
+  
+              <div class="contact-info">
+                <p class="contact-title">Location</p>
+  
+                <address>201 Leek Road, Stoke-on-Trent, UK</address>
+              </div>
+  
+            </li>
+  
+          </ul>
+  
+          <div class="separator"></div>
+  
+          <ul class="social-list">
+  
+            <li class="social-item">
+              <a href="#" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+  
+            <li class="social-item">
+              <a href="#" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+  
+            <li class="social-item">
+              <a href="#" class="social-link">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+  
+          </ul>
+  
+        </div>
+  
+      </aside>
+
+   
+        <!-- - #main-content -->
+  
+  
+    
+      <div class="main-content">
+        <nav class="navbar">
+  
+            <ul class="navbar-list">
+    
+              <li class="navbar-item">
+                <button onclick="window.location.href = 'index.html';" class="navbar-link  active" data-nav-link>Portfolio</button>
+              </li>
+    
+    
+            </ul>
+    
+          </nav>
+          <article class="about  active" data-page="about">
+  
+            <header>
+              <h2 class="h2 article-title">Forecaster</h2>
+            </header>
+            <div class="container">
+                <canvas id="historic-chart"></canvas> 
+               
+                <div style="text-align: center;">
+                    <button class="scrollButton"  type="button" id="scrollleft" style="display: inline-block; margin-right: 10px;">&lt;</button>
+                    <button class="scrollButton" type="button" id="scrollright"style="display: inline-block;">&gt;</button>
+                </div>
+
+
+               
+                <br>
+                <div id="errorMessage" style="color: red;"></div>
+              
+                  
+                <!-- <select id="year-filter" onchange="filterChart()">
+                    <option  onclick="filterChart()">2019</option>
+                    
+                  </select> -->
+
+               
+                  <button onclick="filterChart2019()" style="color: lightseagreen;"> Filter Chart Between 2018 - 2022</button>
+
+            </div> 
+            
+        
+            <div class="container-forecast">
+             <canvas id="forecast-chart"></canvas>
+            </div>
+           
+            <br>
+           
+              
+            <button class="getButton" id="switch-chart">Switch to Forecast Mode</button>
+        
+
+        
+            <script src="./assets/js/forecast.js"></script>
+         
+    
+    
+          </article>
+      
+
+        
+      </div>
+       
+
+
+
+    </main>
+
+</body>
+
+</html>

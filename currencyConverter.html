@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maasha Salih Portfolio</title>
+
+   <!-- 
+      - FontAweome CDN Link for Icons 
+    -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/img/logo.ico" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <!-- <link rel="stylesheet" href="./assets/css/styles.css"> -->
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+
+code 
+form {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.amount {
+  margin-bottom: 20px;
+
+}
+
+.amount p {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+.amount input[type="number"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+
+.amount h6 {
+  font-size: 0.8em;
+  color: gray;
+  margin-top: 5px;
+}
+
+.drop-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.drop-list .from, .drop-list .to {
+  width: 45%;
+  text-align: left;
+}
+
+.drop-list .from p, .drop-list .to p {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+.drop-list .select-box {
+  display: flex;
+  align-items: center;
+}
+
+.drop-list .select-box img {
+  width: 30px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.drop-list .select-box select {
+  width: 70%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+
+.drop-list .icon {
+  width: 10%;
+  font-size: 2em;
+  color: gray;
+  text-align: center;
+}
+
+.exchange-rate, .exchange-rate-fixed {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.getButton {
+  text-align: center;
+  width: 100%;
+  background-color: #c524a2;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.getButton:hover {
+  background-color: #cc2695;
+}
+
+.icon{
+  margin-top: 0.9cm;
+  margin-right: 1.0cm;
+}
+p, h6, .exchange-rate, h4, span, input, .exchange-rate-fixed {
+  color: white;
+}
+
+form .exchange-rate-fixed{
+  font-size: small;
+}
+
+
+
+  </style>
+</head>
+<body>
+    <!--
+        - #SIDEBAR
+      -->
+  <main>
+ 
+    <aside class="sidebar" data-sidebar>
+  
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/img/dp.jpg" alt="Maasha Salih" width="80" style="border-radius: 25%;">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Richard hanrick">Maasha Salih</h1>
+
+          <p class="title">MSc in Software Engineering</p>
+          <br>
+            <img src="./assets/img/transparent-logo.png"  style= "display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;">
+          </div>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:richard@example.com" class="contact-link">maasha_salih@gmail.com</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+
+              <a href="tel:+12133522795" class="contact-link">+447988 390 206</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Birthday</p>
+
+              <time datetime="1982-06-23">June 02, 1996</time>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>201 Leek Road, Stoke-on-Trent, UK</address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+       <!--
+        - #main-content
+      -->
+  
+      <div class="main-content">
+        <nav class="navbar">
+  
+            <ul class="navbar-list">
+    
+              <li class="navbar-item">
+                <button onclick="window.location.href = 'index.html';" class="navbar-link  active" data-nav-link>Portfolio</button>
+              </li>
+    
+    
+            </ul>
+    
+          </nav>
+          <article class="about  active" data-page="about">
+  
+            <header>
+              <h2 class="h2 article-title">Currency Converter</h2>
+            </header>
+            <div class="wrapper">
+              <!-- <header>Currency Converter</header> -->
+              <form action="#">
+                <div class="amount">
+                  <p>Enter Amount</p>
+                  <input type="number" value="1">
+                  <h6>The amount should be limited to 1000</h6>
+                </div>
+                <div class="drop-list">
+                  <div class="from">
+                    <p>From</p>
+                    <div class="select-box">
+                      <img src="https://flagcdn.com/48x36/us.png" alt="flag">
+                      <select> <!-- Options tag are inserted from JavaScript --> </select>
+                    </div>
+                  </div>
+                  <div class="icon"><i class="fas fa-exchange-alt"></i></div>
+                  <div class="to">
+                    <p>To</p>
+                    <div class="select-box">
+                      <img src="https://flagcdn.com/48x36/lk.png" alt="flag">
+                      <select> <!-- Options tag are inserted from JavaScript --> </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="exchange-rate-fixed">Current Exchange Rate...</div>
+                <div class="exchange-rate">Getting exchange rate...</div>
+    
+                <div class="exchange-rate-error-message"></div>
+                <h4>  <span id="time"> </span></h4>
+                <button class="getButton">Get Exchange Rate</button>
+              </form>
+            </div>
+        
+            <script src="./assets/js/country-list.js"></script>
+            <script src="./assets/js/curreny_converter.js"></script>
+    
+    
+           
+    
+          </article>
+      
+
+        
+      </div>
+
+
+  </main>
+ 
+   
+
+
+    <!--
+      - ionicon link
+    -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  
+</body>
+</html>
